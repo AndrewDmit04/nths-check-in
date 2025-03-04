@@ -1,5 +1,5 @@
 import admin from 'firebase-admin';
-
+var serviceAccount = require("../../nths-check-creds.json");
 let apiInitialized = false;
 //This path is a JSON object for the Firebase service account's private key
 // let servAcc = require('../../private_keys/acmutd-hackportal-firebase-adminsdk-ev404-afcb7fdeb3.json');
@@ -21,17 +21,15 @@ export default function initializeApi() {
   apiInitialized = true;
 }
 
+
+
 /**
  * Initializes Firebase admin APIs using environment variables.
  */
 function initializeFirebase() {
   if (admin.apps.length < 1) {
     admin.initializeApp({
-      credential: admin.credential.cert({
-        projectId: process.env.GCP_PROJECT_ID,
-        clientEmail: process.env.GCP_EMAIL,
-        privateKey:  Buffer.from(process.env.GCP_PRIVATE_KEY, 'base64').toString('utf-8'),
-      }),
+      credential: admin.credential.cert(serviceAccount)
     });
   }
 }
