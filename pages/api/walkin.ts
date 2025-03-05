@@ -36,8 +36,8 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
   const msg: sendgrid.MailDataRequired = {
     to: email,
     from: process.env.SENDGRID_SENDER as string,
-    subject: "Axxess Hackathon QR Code",
-    text: `Hello,\n\nThank you for registering for the Axxess Hackathon. Below is your unique QR code for check-in, swag, and food! \n\nLocation:\nECSW 1.100 Axxess Atrium\n800 W. Campbell Road, Richardson, Texas 75080\n\nPlease also join the Discord to stay up to date with the event: https://discord.gg/mcsgb4Vj \n\nIf you have any questions, please reach out to hackathon@axxess.com.\n\nBest regards,\n\nThe Axxess Hackathon Team`,
+    subject: "NTHS Hackathon QR Code",
+    text: `Hello,\n\nThank you for registering for the NTHS Hackathon. Below is your unique QR code for check-in, swag, and food! We recommend arriving at 8:30am to get in line for check-in as space is limited.\n\nHackathon check-in begins on March 8th, 9 a.m. CDT.\n\nLocation:\nECSW 1.100 Axxess Atrium\n800 W. Campbell Road, Richardson, Texas 75080\n\nPlease also join the Discord to stay up to date with the event: https://discord.gg/mcsgb4Vj \n\nIf you have any questions, please reach out to outreach@acmutd.co.\n\nBest regards,\n\nThe ACM Community Team`,
     attachments: [
       {
         content: qrcode,
