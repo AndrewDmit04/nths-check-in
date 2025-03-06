@@ -42,7 +42,7 @@ async function sendEmailsToRegisteredUsers(req: NextApiRequest, res: NextApiResp
             to: email,
             from: process.env.SENDGRID_SENDER as string,
             subject: 'NTHS Hackathon QR Code',
-            text: `Hello,\n\nThank you for registering for the NTHS Hackathon. Below is your unique QR code for check-in, swag, and food! We recommend arriving at 8:30am to get in line for check-in.\n\nHackathon check-in begins on March 8th, 9 a.m. CDT.\n\nLocation:\nECSW 1.100 Axxess Atrium\n800 W. Campbell Road, Richardson, Texas 75080\n\nPlease also join the remind\nFor Freshman/Sophomore: https://www.remind.com/join/nths-freso\nFor Junior/Senior:\nhttps://www.remind.com/join/nths-jrsr\nto stay up to date with the event.\n\nIf you have any questions, please reach out to outreach@acmutd.co.\n\nBest regards,\n\nThe ACM Community Team`,
+            text: `Hello,\n\nThank you for registering for the NTHS Hackathon. Below is your unique QR code for check-in, swag, and food! We recommend arriving at 8:30am to get in line for check-in.\n\nHackathon check-in begins on March 8th, 9 a.m. CDT.\n\nLocation:\nECSW 1.100 Axxess Atrium\n800 W. Campbell Road, Richardson, Texas 75080\n\nPlease also join the remind\nFor Freshman/Sophomore:\nhttps://www.remind.com/join/nths-freso\nFor Junior/Senior:\nhttps://www.remind.com/join/nths-jrsr\nto stay up to date with the event.\n\nIf you have any questions, please reach out to outreach@acmutd.co.\n\nBest regards,\nThe ACM Community Team`,
             attachments: [
               {
                 content: qrcode,
