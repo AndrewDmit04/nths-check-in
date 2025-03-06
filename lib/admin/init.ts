@@ -1,5 +1,5 @@
 import admin from 'firebase-admin';
-console.log('FIREBASE_ADMIN_KEYS', process.env.FIREBASE_ADMIN_KEYS);
+
 var serviceAccount = JSON.parse(process.env.FIREBASE_ADMIN_KEYS);
 
 let apiInitialized = false;
